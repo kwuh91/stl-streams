@@ -37,7 +37,7 @@ public:
 		std::random_device dev;
 		std::mt19937 rng(dev());
 		std::uniform_int_distribution size(random_string_size_range_begin,
-			                               random_string_size_rage_end);
+			                           random_string_size_rage_end);
 		size_t string_size = size(rng);
 
 		std::uniform_int_distribution character(65, 90); // A-Z
@@ -88,7 +88,7 @@ public:
 		std::random_device dev;
 		std::mt19937 rng(dev());
 		std::uniform_int_distribution range(random_price_range_begin,
-			                                random_price_range_end);
+			                            random_price_range_end);
 
 		return std::to_string(range(rng));
 	}
@@ -98,11 +98,11 @@ public:
 		std::random_device dev;
 		std::mt19937 rng(dev());
 		std::uniform_int_distribution year(random_year_range_begin,
-			                               random_year_range_end);
+			                           random_year_range_end);
 		std::uniform_int_distribution month(random_month_range_begin,
-			                                random_month_range_end);
+			                            random_month_range_end);
 		std::uniform_int_distribution day(random_day_range_begin,
-			                              random_day_range_end);
+			                          random_day_range_end);
 
 		int year_int = year(rng);
 		int month_int = month(rng);
@@ -121,7 +121,7 @@ public:
 		std::random_device dev;
 		std::mt19937 rng(dev());
 		std::uniform_int_distribution range(random_amount_of_work_done_range_begin,
-			                                random_amount_of_work_done_range_end);
+			                            random_amount_of_work_done_range_end);
 
 		return std::to_string(range(rng)) + "%";
 	}
@@ -160,7 +160,7 @@ struct Repairs {
 
 // operator overloading == for struct
 inline bool operator == (const Repairs& mystruct1, const Repairs& mystruct2) {
-	return mystruct1._companyName == mystruct2._companyName &&
+	return     mystruct1._companyName == mystruct2._companyName &&
 		   mystruct1._jobType     == mystruct2._jobType     &&
 		   mystruct1._unit        == mystruct2._unit        &&
 		   mystruct1._price       == mystruct2._price       &&
@@ -170,7 +170,7 @@ inline bool operator == (const Repairs& mystruct1, const Repairs& mystruct2) {
 
 // operator overloading != for struct
 inline bool operator != (const Repairs& mystruct1, const Repairs& mystruct2) {
-	return mystruct1._companyName != mystruct2._companyName &&
+	return     mystruct1._companyName != mystruct2._companyName &&
 		   mystruct1._jobType     != mystruct2._jobType     &&
 		   mystruct1._unit        != mystruct2._unit        &&
 		   mystruct1._price       != mystruct2._price       &&
